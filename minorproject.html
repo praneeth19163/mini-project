@@ -1,0 +1,770 @@
+<html>
+    <head>
+        <title>
+            Histotical Places
+        </title>
+        <style>
+            *{
+                box-sizing: border-box;
+                margin: 0%;
+                padding: 0%;
+                
+            }
+            #main{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                flex-wrap: nowrap;
+            }
+            #full{
+                position: relative;
+                margin-top: 2%;
+                background-image: linear-gradient(orange,white,lightgreen);
+            
+            }
+            header{
+               box-shadow: -5px 5px 5px  black;
+               background-image: linear-gradient(120deg,rgb(247, 185, 71),white,rgb(134, 243, 134));
+               top: 0px;
+               position: fixed;
+               margin-top: 0%;
+               text-align: center;
+               font-family: fantasy,'Times New Roman', Times, serif;
+               width: 100%;
+               left: 0%;
+               font-size:xx-large;font-weight: 500;
+               z-index: 1;
+        border: 8px solid black;
+        margin-right: 2px;
+        border-radius: 15px;
+        animation-name: header;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    
+    
+            } 
+            @keyframes header{
+                0%{border: 10px solid orange ;}
+                50%{border: 10px solid white; background-image: linear-gradient(white);}
+                100%{border: 10px solid lightgreen ; background-image: linear-gradient(rgb(134, 243, 134));}
+            }
+            #foot{
+                margin-bottom: 25px;
+                padding-bottom: 25px;
+            }
+            footer{
+                
+                box-shadow: -5px -5px 5px  black;
+                background-image: linear-gradient(120deg,rgb(247, 185, 71),white,rgb(134, 243, 134));
+                bottom: 0px;
+                position: fixed;
+                z-index: 1;
+                text-align: center;
+                width: 100%;
+                left: 0%;
+                font-size: large;
+             
+             }
+            
+             #visit{
+                padding-top: 5px;
+                 font-weight: 100;
+                 margin-top: 0%;
+                 margin-bottom: 0%;
+             }
+             #des{
+                 margin:0%;
+                 padding:0%;
+                 float: right;
+                 font-size: small;
+                 clear: both;
+             }
+             
+            
+            #hist{
+                color: orange;
+            }
+            #place{
+                color:lightblue ;
+            }
+            #ind{
+                color: darkgreen;
+            }
+            #a1{
+                width: 90%;
+                margin-top: 7%;
+                margin-left: 5%;
+                margin-right: 5%;
+                height: auto;
+                border: 2px dotted black;
+                padding-left: 20px;
+                background-image: linear-gradient(120deg,orange,white,lightgreen);
+                z-index: 1.6;
+                
+            }
+            a{
+                text-decoration: none;
+                color:red;
+                font-weight:bold;
+            }
+            #cir{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                
+
+            }
+            #cir1{
+                width: 50%;
+                height: auto;
+                padding-left: 20%;
+                font-family:'Courier New', Courier, monospace;
+            
+            
+
+            }
+            
+            #b{
+      
+                width: 145px;
+            height: 145px;
+            border: 3px solid black;
+            border-radius: 50%;
+            margin-top: 0%;
+            margin-right: 20%;
+            background-image: url("https://tse1.mm.bing.net/th?id=OIP.9hk0trqlH6x5iXxj4vXtpgHaHa&pid=Api&P=0");
+            background-repeat: no-repeat;
+            background-size: cover;
+            animation-name: b;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+
+            }
+            @keyframes b{
+                0%{transform: rotate(0deg);border: 10px solid orange ;}
+                50%{transform: rotate(180deg);border: 10px solid white; }
+                100%{transform: rotate(360deg);border: 10px solid lightgreen ;}
+            }
+            #data{
+                background-image: linear-gradient(360deg,orange,white,lightgreen);
+                width: 100%;
+                height:auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-content: space-between;
+                flex-wrap: nowrap;
+                align-items: center;
+            }
+            #f1{
+                width: 100%;
+            display: grid;
+            grid-template-areas: 'gr11 gr11 gr11 gr11 gr11 gr11'
+            'gr12 gr12 gr13 gr13 gr13 gr13'
+            ;
+            background-color:orange;
+            margin:  10px 0 10px 0;
+            border: 10px solid black;
+            z-index: 1.5;
+
+            gap: 6px;
+            }
+            #g11 {
+                grid-area: gr11;
+               text-align: center;
+               font-family:'Times New Roman', Times, serif;
+               height: fit-content;
+               border: 1px solid black;
+               margin:5px 5px 5px 5px;
+               font-size: xx-large;
+               background-color: aliceblue;
+            }
+            #g12{
+                grid-area: gr12;
+                width: 250px;
+            height: 250px;
+            border: 3px solid black;
+            border-radius: 50%;
+            margin-top: 0%;
+            margin-right: 20%;
+            background-image: url("https://tse1.mm.bing.net/th?id=OIP.-gBdtohhAe1bDy0QJZAITgHaFP&pid=Api&P=0");
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin:10% 0 10% 15%;
+            animation-name: g12;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            }
+            @keyframes g12{
+                0%{background-position: center;}
+                25%{background-position: right;}
+                50%{background-position: bottom;}
+                75%{background-position: left;}
+                100%{background-position: center;}
+            }
+            #g13{
+                grid-area: gr13;
+                border: 1px solid black;
+                margin:5px 5px 5px 5px;
+                width: 70%;
+                margin-left: 20%;
+                padding: 20px;
+                background-color: aliceblue;
+                font-size: large;   
+                 font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;         }
+            #f1 > div{
+                
+                text-align: center;
+                
+            
+            }
+            #f2{
+                width: 100%;
+            display: grid;
+            grid-template-areas: 'gr11 gr11 gr11 gr11 gr11 gr11'
+            'gr12 gr12 gr13 gr13 gr13 gr13'
+            ;
+            background-color:white;
+            margin:  10px 0 10px 0;
+            border: 10px solid black;
+            z-index: 1.5;
+
+            gap: 6px;
+            }
+            #g21 {
+                grid-area: gr11;
+               text-align: center;
+               font-family:'Times New Roman', Times, serif;
+               height: fit-content;
+               border: 1px solid black;
+               margin:5px 5px 5px 5px;
+               font-size: xx-large;
+               background-color: lightgoldenrodyellow;
+            }
+            #g22{
+                grid-area: gr12;
+                width: 250px;
+            height: 250px;
+            border: 3px solid black;
+            
+            margin-top: 0%;
+            margin-right: 20%;
+            background-image: url("https://tse1.mm.bing.net/th?id=OIP.GDQZcHncgSPo6Oil31xAQAHaFS&pid=Api&P=0");
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin:10% 0 10% 15%;
+            animation-name: g12;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            }
+            @keyframes g22{
+                0%{background-position: center;}
+                25%{background-position: right;}
+                50%{background-position: bottom;}
+                75%{background-position: left;}
+                100%{background-position: center;}
+            }
+            #g23{
+                grid-area: gr13;
+                border: 1px solid black;
+                margin:5px 5px 5px 5px;
+                width: 70%;
+                margin-left: 20%;
+                padding: 20px;
+                background-color:  lightgoldenrodyellow;
+                font-size: large;   
+                 font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;         }
+            #f2 > div{
+                text-align: center;
+            }
+            #f3{
+                width: 100%;
+            display: grid;
+            grid-template-areas: 'gr11 gr11 gr11 gr11 gr11 gr11'
+            'gr12 gr12 gr13 gr13 gr13 gr13'
+            ;
+            background-color:lightgreen;
+            margin:  10px 0 10px 0;
+            border: 10px solid black;
+            z-index: 1.5;
+
+            gap: 6px;
+            }
+            #g31 {
+                grid-area: gr11;
+               text-align: center;
+               font-family:'Times New Roman', Times, serif;
+               height: fit-content;
+               border: 1px solid black;
+               margin:5px 5px 5px 5px;
+               font-size: xx-large;
+               background-color: lightcoral;
+            }
+            #g32{
+                grid-area: gr12;
+                width: 250px;
+            height: 250px;
+            border: 3px solid black;
+            
+            margin-top: 0%;
+            margin-right: 20%;
+            background-image: url("https://tse2.mm.bing.net/th?id=OIP.TosGfHo3CCoJWoVdBZTp-AHaEm&pid=Api&P=0");
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin:10% 0 10% 15%;
+            animation-name: g32;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            }
+            @keyframes g32{
+                0%{background-position: center;}
+                25%{background-position: right;}
+                50%{background-position: bottom;}
+                75%{background-position: left;}
+                100%{background-position: center;}
+            }
+            #g33{
+                grid-area: gr13;
+                border: 1px solid black;
+                margin:5px 5px 5px 5px;
+                width: 70%;
+                margin-left: 20%;
+                padding: 20px;
+                background-color:  lightcoral;
+                font-size: large;   
+                 font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;         }
+            #f3 > div{
+                text-align: center;
+            }
+            #f4{
+                width: 100%;
+            display: grid;
+            grid-template-areas: 'gr11 gr11 gr11 gr11 gr11 gr11'
+            'gr12 gr12 gr13 gr13 gr13 gr13'
+            ;
+            background-color:orange;
+            margin:  10px 0 10px 0;
+            border: 10px solid black;
+            z-index: 1.5;
+
+            gap: 6px;
+            }
+            #g41 {
+                grid-area: gr11;
+               text-align: center;
+               font-family:'Times New Roman', Times, serif;
+               height: fit-content;
+               border: 1px solid black;
+               margin:5px 5px 5px 5px;
+               font-size: xx-large;
+               background-color:antiquewhite;
+            }
+            #g42{
+                grid-area: gr12;
+                width: 250px;
+            height: 250px;
+            border: 3px solid black;
+            border-radius: 50%;
+            margin-top: 0%;
+            margin-right: 20%;
+            background-image: url("https://tse4.mm.bing.net/th?id=OIP.j4g2NjMig_bpdVkpxF0vjwHaHa&pid=Api&P=0");
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin:10% 0 10% 15%;
+            animation-name: g42;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            }
+            @keyframes g42{
+                0%{background-position: top;}
+            
+                100%{background-position: bottom;}
+            }
+            #g43{
+                grid-area: gr13;
+                border: 1px solid black;
+                margin:5px 5px 5px 5px;
+                width: 70%;
+                margin-left: 20%;
+                padding: 20px;
+                background-color: antiquewhite;
+                font-size: large;   
+                 font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;         }
+            #f4 > div{
+                
+                text-align: center;
+                
+            
+            }
+            #f5{
+                width: 100%;
+            display: grid;
+            grid-template-areas: 'gr11 gr11 gr11 gr11 gr11 gr11'
+            'gr13 gr13 gr13 gr13 gr12 gr12'
+            ;
+            background-color:white;
+            margin:  10px 0 10px 0;
+            border: 10px solid black;
+            z-index: 1.5;
+
+            gap: 6px;
+            }
+            #g51 {
+                grid-area: gr11;
+               text-align: center;
+               font-family:'Times New Roman', Times, serif;
+               height: fit-content;
+               border: 1px solid black;
+               margin:5px 5px 5px 5px;
+               font-size: xx-large;
+               background-color:burlywood;
+            }
+            #g52{
+                grid-area: gr12;
+                width: 250px;
+            height: 250px;
+            border: 3px solid black;
+            border-radius: 50%;
+            background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Charminar_Aerial_View.jpg/330px-Charminar_Aerial_View.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin:10% 65px 5% 0px;
+            
+            animation-name: g52;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            }
+            @keyframes g52{
+                0%{background-position: center;}
+                25%{background-position: right;}
+                50%{background-position: bottom;}
+                75%{background-position: left;}
+                100%{background-position: center;}
+            }
+            #g53{
+                grid-area: gr13;
+                border: 1px solid black;
+                margin:5px 0px 5px 5px;
+                width: 70%;
+                margin-left: 10%;
+                padding: 20px;
+                background-color: burlywood;
+                font-size: large;   
+                 font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;         }
+            #f5 > div{
+                
+                text-align: center;
+                
+            
+            }
+            
+            #f6{
+                width: 100%;
+            display: grid;
+            grid-template-areas: 'gr11 gr11 gr11 gr11 gr11 gr11'
+            'gr13 gr13 gr13 gr13 gr12 gr12'
+            ;
+            background-color:lightgreen;
+            margin:  10px 0 10px 0;
+            border: 10px solid black;
+            z-index: 1.5;
+
+            gap: 6px;
+            }
+            #g61 {
+                grid-area: gr11;
+               text-align: center;
+               font-family:'Times New Roman', Times, serif;
+               height: fit-content;
+               border: 1px solid black;
+               margin:5px 5px 5px 5px;
+               font-size: xx-large;
+               background-color:white;
+            }
+            #g62{
+                grid-area: gr12;
+                width: 250px;
+            height: 250px;
+            border: 3px solid black;
+            
+            background-image: url("http://www.liveenhanced.com/wp-content/uploads/2018/01/4.Golconda-Fort-Images.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin:10% 65px 5% 0px;
+            
+            animation-name: g62;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            }
+            @keyframes g62{
+                0%{background-position: center;}
+                25%{background-position: right;}
+                50%{background-position: bottom;}
+                75%{background-position: left;}
+                100%{background-position: center;}
+            }
+            #g63{
+                grid-area: gr13;
+                border: 1px solid black;
+                margin:5px 0px 5px 5px;
+                width: 70%;
+                margin-left: 10%;
+                padding: 20px;
+                background-color: white;
+                font-size: large;   
+                 font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;         }
+            #f6 > div{
+                
+                text-align: center;
+                
+            
+            }
+            #f7{
+                width: 100%;
+            display: grid;
+            grid-template-areas: 'gr11 gr11 gr11 gr11 gr11 gr11'
+            'gr13 gr13 gr13 gr13 gr12 gr12'
+            ;
+            background-color:orange;
+            margin:  10px 0 10px 0;
+            border: 10px solid black;
+            z-index: 1.5;
+color: white;
+            gap: 6px;
+            }
+            #g71 {
+                grid-area: gr11;
+               text-align: center;
+               font-family:'Times New Roman', Times, serif;
+               height: fit-content;
+               border: 1px solid black;
+               margin:5px 5px 5px 5px;
+               font-size: xx-large;
+               background-color: rgb(243, 115, 115);
+            }
+            #g72{
+                grid-area: gr12;
+                width: 250px;
+            height: 250px;
+            border: 3px solid black;
+            
+            background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Delhi_fort.jpg/1920px-Delhi_fort.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin:10% 65px 5% 0px;
+            
+            animation-name: g72;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            }
+            @keyframes g72{
+                0%{background-position: center;}
+                25%{background-position: right;}
+                50%{background-position: bottom;}
+                75%{background-position: left;}
+                100%{background-position: center;}
+            }
+            #g73{
+                grid-area: gr13;
+                border: 1px solid black;
+                margin:5px 0px 5px 5px;
+                width: 70%;
+                margin-left: 10%;
+                padding: 20px;
+                background-color: rgb(243, 115, 115);
+                font-size: large;   
+                 font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;         }
+            #f7> div{
+                
+                text-align: center;}
+            #f8{
+                width: 100%;
+            display: grid;
+            grid-template-areas: 'gr11 gr11 gr11 gr11 gr11 gr11'
+            'gr13 gr13 gr13 gr13 gr12 gr12'
+            ;
+            background-color:lightgreen;
+            margin:  10px 0 10px 0;
+            border: 10px solid black;
+            z-index: 1.5;
+          color: white;
+            gap: 6px;
+            }
+            #g81 {
+                grid-area: gr11;
+               text-align: center;
+               font-family:'Times New Roman', Times, serif;
+               height: fit-content;
+               border: 1px solid black;
+               margin:5px 5px 5px 5px;
+               font-size: xx-large;
+               background-color:darkgreen;
+            }
+            #g82{
+                grid-area: gr12;
+                width: 250px;
+            height: 250px;
+            border: 3px solid black;
+            border-radius: 50%;
+            background-image: url("http://www.visittnt.com/blog/wp-content/uploads/2018/04/Ellora-Caves-outside.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin:10% 65px 5% 0px;
+            
+            animation-name: g82;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            }
+            @keyframes g82{
+                0%{background-position: center;}
+                25%{background-position: right;}
+                50%{background-position: bottom;}
+                75%{background-position: left;}
+                100%{background-position: center;}
+            }
+            #g83{
+                grid-area: gr13;
+                border: 1px solid black;
+                margin:5px 0px 5px 5px;
+                width: 70%;
+                margin-left: 10%;
+                padding: 20px;
+                background-color: darkgreen;
+                font-size: large;   
+                 font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;         }
+            #f8 > div{
+                
+                text-align: center;
+                
+            
+            }
+                
+            
+        </style>
+    </head>
+    <body>
+        <div id="full">
+            <header><span id="hist">Historical</span><span id="place"> Places In</span><span id="ind"> India</span></header>
+            <div id="main">            
+                <div id="a1" >
+                <h1  style="margin-top: 2px; color: black; text-align: center;">&nbsp &nbsp<ins><em>List Of Some Famous Historical Places</em></ins></h1>
+
+                 <div id="cir">
+                    <div id="cir1">
+                    <ol>
+                        <li><a href="#f1">Fatehpur Sikri</a></li>
+                        <li><a href="#f2">Hawa Mahal</a></li>
+                        <li><a href="#f3">Mysore Palace</a></li>
+                        <li><a href="#f4">India Gate</a></li>
+                        <li><a href="#f5">Charminar</a></li>
+                        <li><a href="#f6">Golconda Fort</a></li>
+                        <li><a href="#f7">Red Fort</a></li>
+                        <li><a href="#f8">Ellora Caves</a></li>
+                    </ol>
+                    </div>
+                    <div id="b"></div>
+                    </div>
+                </div>
+                <hr style="margin-top: 1%;">
+                <hr><hr><hr><hr></div>
+                <div id="data">
+                    
+                   <div id="f1">
+                    <div id="g11">Fatehpur Sikri</div>
+                    <div id="g12"></div>
+                    <div id="g13"> &nbsp &nbsp &nbsp Fatehpur Sikri is a town in the Agra District of Uttar Pradesh,Situated 35.7 kilometres from the district headquarters of Agra, Fatehpur Sikri itself was founded as the capital of the Mughal Empire in 1571 by Emperor Akbar, serving this role from 1571 to 1585, when Akbar abandoned it due to a campaign in Punjab and was later completely abandoned in 1610.
+                        <br>
+                        <br>
+                        <br><br><br>
+                        <p ">For More Information - <a href="https://en.wikipedia.org/wiki/Fatehpur_Sikri" target="_blank" style="color: yellowgreen;">Click Here...</a></p>
+                    </div>
+
+
+                   </div>
+                   <hr style="margin-top: 1%;">
+                   <div id="f2">
+                    <div id="g21">Hawa Mahal</div>
+                    <div id="g22"></div>
+                    <div id="g23"> &nbsp &nbsp &nbsp  Hawa Mahal was built in 1799. It has 953 windows on the outside walls. The honeycomb shaped and beautifully carved windows allow breeze to blow through the palace and makes it a perfect summer palace. It was built as an extension to the City Palace nearby.
+                        <br>
+                        <br>
+                        <br><br><br><br>
+                        <p ">For More Information - <a href="https://en.wikipedia.org/wiki/Hawa_Mahal" target="_blank" style="color: yellowgreen;">Click Here...</a></p>
+                    </div>
+                   </div>
+                   <hr style="margin-top: 1%;">
+                   <div id="f3">
+                    <div id="g31">Mysore Palace</div>
+                    <div id="g32"></div>
+                    <div id="g33"> &nbsp &nbsp &nbsp  Mysore Palace also known as Amba Vilas Palace located at the heart of Mysore city is the most prominent tourist destination of Mysore that attracts millions of visitors round the year. This historical palace housed within the Old Fort facing the Chamunda Hills stands as the official residence of the Wadiyar dynasty who ruled the Kingdom of Mysore from 1399 to 1950. Displaying Indo-Saracenic style of architecture, this sprawling building is a replacement of the old wooden building destroyed by fire in late 19th century. 
+                        <br>
+                        <br>
+                        <br><br>
+                        <p ">For More Information - <a href="https://en.wikipedia.org/wiki/Hawa_Mahal" target="_blank" style="color: yellowgreen;">Click Here...</a></p>
+                    </div>
+                   </div>
+                   <hr style="margin-top: 1%;">
+                   <div id="f4">
+                    <div id="g41">India Gate</div>
+                    <div id="g42"></div>
+                    <div id="g43"> &nbsp &nbsp &nbsp  India Gate, official name Delhi Memorial, originally called All-India War Memorial, monumental sandstone arch in New Delhi, dedicated to the troops of British India who died in wars fought between 1914 and 1919. India Gate, which is located at the eastern end of the Rajpath (formerly called the Kingsway), is about 138 feet (42 metres) in height.
+                        <br>
+                        <br>
+                        <br><br>
+                        <p ">For More Information - <a href="https://en.wikipedia.org/wiki/India_Gat" target="_blank" style="color: yellowgreen;">Click Here...</a></p>
+                    </div>
+                   </div>
+                   <hr style="margin-top: 1%;">
+                   <div id="f5">
+                    <div id="g51">Charminar</div>
+                    <div id="g52"></div>
+                    <div id="g53"> &nbsp &nbsp &nbsp  Built in the year 1591 AD, Charminar is the beating heart of Hyderabadis. The landmark of the city was built by the fifth ruler of Qutb Shahi dynasty, Muhammad Quli Qutb Shah. Charminar, a monument and mosque, is an imposing model that celebrates the influence of the Muslim Turkomans in India. Considered to be in the top ten monuments of the country, here’s a little something about the structure and its history.
+                        <br>
+                        <br>
+                        <br><br>
+                        <p ">For More Information - <a href="https://en.wikipedia.org/wiki/Charminar" target="_blank" style="color: yellowgreen;">Click Here...</a></p>
+                    </div>
+                   </div>
+                   <hr style="margin-top: 1%;">
+                   <div id="f6">
+                    <div id="g61">Golconda Fort</div>
+                    <div id="g62"></div>
+                    <div id="g63"> &nbsp &nbsp &nbsp  It was originally known as Mankal, and built on a hilltop in the year 1143. It was originally a mud fort under the reign of Rajah of Warangal. Later it was fortified between 14th and 17th centuries by the Bahmani Sultans and then the ruling Qutub Shahi dynasty. Golconda was the principal capital of the Qutub Shahi kings. The inner fort contains ruins of palaces, mosques and a hill top pavilion, which rises about 130 meters high and gives a bird’s eye view of other buildings.
+                        <br>
+                        <br>
+                        <br><br>
+                        <p ">For More Information - <a href="https://en.wikipedia.org/wiki/Golconda" target="_blank" style="color: yellowgreen;">Click Here...</a></p>
+                    </div>
+                   </div>
+                   <hr style="margin-top: 1%;">
+                   <div id="f7">
+                    <div id="g71">Red Fort</div>
+                    <div id="g72"></div>
+                    <div id="g73"> &nbsp &nbsp &nbsp Red Fort, also called Lal Qalʿah, also spelled Lal Kila or Lal Qila, Mughal fort in Old Delhi, India. It was built by Shah Jahān in the mid-17th century and remains a major tourist attraction. The fort was designated a UNESCO World Heritage site in 2007.
+                        <br>
+                        <br>
+                        <br><br>
+                        <p ">For More Information - <a href="https://en.wikipedia.org/wiki/Red_Fort" target="_blank" style="color: yellowgreen;">Click Here...</a></p>
+                    </div></div>
+                   <hr style="margin-top: 1%;">
+                   <div id="f8">
+                    <div id="g81">Ellora Caves</div>
+                    <div id="g82"></div>
+                    <div id="g83"> &nbsp &nbsp &nbsp Ellora (also known as Elura and, in ancient times, as Elapura) is a sacred site in Maharastra, central India. The Ellora Caves are listed by UNESCO as a World Heritage Site and is celebrated for its Hindu, Buddhist, and Jain temples and monuments which were carved from the local cliff rock in the 6th to 8th century CE. 
+                        <br>
+                        <br>
+                        <br><br>
+                        <p ">For More Information - <a href="https://en.wikipedia.org/wiki/Ellora_Caves" target="_blank" style="color: yellowgreen;">Click Here...</a></p>
+                    </div>
+                    </div>
+                   <hr style="margin-top: 1%;">
+                   <div id="f9"><audio src="https://upload.wikimedia.org/wikipedia/commons/5/50/Jana_gana_mana_vocal.ogg" controls autoplay="true"></audio></div>
+                </div>
+        </div>
+<div id="foot"></div>
+            <footer><h3 id="visit">&nbsp &nbspThanks for Visiting...</h3>
+                <h2 id="des">~Designed And Developed By&nbsp --  A . Praneeth Kumar Reddy</h2></footer>
+        </div>
+    </body>
+</html>
